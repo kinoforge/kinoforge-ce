@@ -18,8 +18,8 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => [
-  { title: "VideoGPT Studio" },
-  { name: "description", content: "Create videos locally with the VideoGPT engine." },
+  { title: "Kinoforge Studio" },
+  { name: "description", content: "Create videos locally with the Kinoforge engine." },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -58,7 +58,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     <main className="grid min-h-svh place-items-center bg-background p-6 text-foreground">
       <section className="w-full max-w-lg rounded-xl border bg-card p-6 shadow-sm">
         <p className="text-sm font-semibold text-muted-foreground">Error {status}</p>
-        <h1 className="mt-2 text-xl font-semibold">VideoGPT Studio is unavailable</h1>
+        <h1 className="mt-2 text-xl font-semibold">Kinoforge Studio is unavailable</h1>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{message}</p>
         <a className="mt-5 inline-flex rounded-md border px-3 py-2 text-sm font-medium" href="/">
           Return to Studio

@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="assets/logo.png" alt="videogpt" width="104" height="104">
+  <img src="assets/logo.png" alt="Kinoforge" width="104" height="104">
 </p>
 
-<h1 align="center">videogpt · Community Edition</h1>
+<h1 align="center">Kinoforge · Community Edition</h1>
 
 <p align="center">
-  Videogpt, self-hosted version<br>
+  Kinoforge, self-hosted version<br>
   Cut short clips out of long videos, and generate new videos from a prompt.
 </p>
 
 <p align="center">
-  <a href="https://videogpt.dev"><img src="https://img.shields.io/badge/website-videogpt.dev-7c3aed" alt="Website"></a>
+  <a href="https://kinoforge.dev"><img src="https://img.shields.io/badge/website-kinoforge.dev-7c3aed" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue" alt="License"></a>
   <a href="https://github.com/videogpt-dev/videogpt-ce/commits/main"><img src="https://img.shields.io/github/last-commit/videogpt-dev/videogpt-ce" alt="Last commit"></a>
   <img src="https://img.shields.io/badge/docker-compose-2496ED?logo=docker&logoColor=white" alt="Docker Compose">
@@ -19,7 +19,7 @@
 
 ---
 
-This is the self-host edition of [videogpt.dev](https://videogpt.dev). It runs the same open-source
+This is the self-host edition of [kinoforge.dev](https://kinoforge.dev). It runs the same open-source
 engine the cloud product uses, so everything happens on your box. The engine has three parts:
 
 - **Clips.** Feed it a long video (a file or a URL), get back short vertical clips with
@@ -80,7 +80,7 @@ address in [SECURITY.md](SECURITY.md), not the public issue tracker.
 
 Source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE). Free for personal
 and other noncommercial use; running it as a commercial service is not permitted. For
-commercial use, use [videogpt.dev](https://videogpt.dev).
+commercial use, use [kinoforge.dev](https://kinoforge.dev).
 
 The engine ([kinoforge](https://github.com/videogpt-dev/kinoforge)) uses the same license. The
 UI kit ([videogpt-ui](https://github.com/videogpt-dev/videogpt-ui)), the catalog
