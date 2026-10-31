@@ -8,7 +8,7 @@ services:
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
       # Provider "videogpt": your videogpt.dev API key; spends your account's credits.
       VIDEOGPT_API_KEY: ${VIDEOGPT_API_KEY:-}
-      VIDEOGPT_CLOUD_URL: ${VIDEOGPT_CLOUD_URL:-https://infrelay.videogpt.dev}
+      VIDEOGPT_CLOUD_URL: ${VIDEOGPT_CLOUD_URL:-https://infrelay.kinoforge.dev}
     volumes:
       - whisper-cache:/cache/hf
     expose:
