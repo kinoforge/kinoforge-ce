@@ -6,7 +6,7 @@ services:
     environment:
       FAL_KEY: ${FAL_KEY:-}
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
-      # Provider "videogpt": your videogpt.dev API key; spends your account's credits.
+      # Provider "videogpt": your kinoforge.dev API key; spends your account's credits.
       VIDEOGPT_API_KEY: ${VIDEOGPT_API_KEY:-}
       VIDEOGPT_CLOUD_URL: ${VIDEOGPT_CLOUD_URL:-https://infrelay.kinoforge.dev}
     volumes:
