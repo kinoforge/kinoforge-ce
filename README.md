@@ -11,8 +11,9 @@
 
 <p align="center">
   <a href="https://kinoforge.dev"><img src="https://img.shields.io/badge/website-kinoforge.dev-7c3aed" alt="Website"></a>
+  <a href="https://www.producthunt.com/products/kinoforge"><img src="https://img.shields.io/badge/Product%20Hunt-Kinoforge-da552f?logo=producthunt&logoColor=white" alt="Kinoforge on Product Hunt"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue" alt="License"></a>
-  <a href="https://github.com/videogpt-dev/videogpt-ce/commits/main"><img src="https://img.shields.io/github/last-commit/videogpt-dev/videogpt-ce" alt="Last commit"></a>
+  <a href="https://github.com/kinoforge/kinoforge-ce/commits/main"><img src="https://img.shields.io/github/last-commit/kinoforge/kinoforge-ce" alt="Last commit"></a>
   <img src="https://img.shields.io/badge/docker-compose-2496ED?logo=docker&logoColor=white" alt="Docker Compose">
   <img src="https://img.shields.io/badge/self--hosted-yes-success" alt="Self-hosted">
 </p>
@@ -44,8 +45,8 @@ engine the cloud product uses, so everything happens on your box. The engine has
 You need Docker and Docker Compose. Nothing else.
 
 ```sh
-git clone --recurse-submodules https://github.com/videogpt-dev/videogpt-ce.git
-cd videogpt-ce
+git clone --recurse-submodules https://github.com/kinoforge/kinoforge-ce.git
+cd kinoforge-ce
 cp .env.example .env          # optional: add provider keys for the AI features
 docker compose up --build
 ```
@@ -61,8 +62,8 @@ fast after. Output and the model cache survive `docker compose down`.
 |---|---|---|
 | `apps/dashboard` | this repo | the web UI |
 | `apps/core` | this repo | single-user host: projects, disk storage, drives the engine and editor |
-| `apps/kinoforge` | [submodule](https://github.com/videogpt-dev/kinoforge) | the engine: clips, story, series (transcribe, find moments, script) |
-| `studio` | [submodule](https://github.com/videogpt-dev/videogpt-studio) | render service: assembles story scenes into an mp4 (ffmpeg + Remotion) |
+| `apps/kinoforge` | [submodule](https://github.com/kinoforge/kinoforge) | the engine: clips, story, series (transcribe, find moments, script) |
+| `studio` | [submodule](https://github.com/kinoforge/kinoforge-studio) | render service: assembles story scenes into an mp4 (ffmpeg + Remotion) |
 | `services/infrelay-lite` | this repo | inference gateway (local whisper, local voice, OpenRouter, fal) |
 
 `packages/videogpt-ui` and `packages/videogpt-catalog` are the shared UI and catalog
@@ -82,7 +83,7 @@ Source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE). Free
 and other noncommercial use; running it as a commercial service is not permitted. For
 commercial use, use [kinoforge.dev](https://kinoforge.dev).
 
-The engine ([kinoforge](https://github.com/videogpt-dev/kinoforge)) uses the same license. The
-UI kit ([videogpt-ui](https://github.com/videogpt-dev/videogpt-ui)), the catalog
-([videogpt-catalog](https://github.com/videogpt-dev/videogpt-catalog)) and the editor
-([videogpt-studio](https://github.com/videogpt-dev/videogpt-studio)) are MIT.
+The engine ([kinoforge](https://github.com/kinoforge/kinoforge)) uses the same license. The
+UI kit ([kinoforge-ui](https://github.com/kinoforge/kinoforge-ui)), the catalog
+([kinoforge-catalog](https://github.com/kinoforge/kinoforge-catalog)) and the editor
+([kinoforge-studio](https://github.com/kinoforge/kinoforge-studio)) are MIT.
