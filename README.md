@@ -20,7 +20,7 @@
 
 ---
 
-This is the self-host edition of [kinoforge.dev](https://kinoforge.dev). It runs the same open-source
+This is the self-host edition of [kinoforge.dev](https://kinoforge.dev). It runs the same
 engine the cloud product uses, so everything happens on your box. The engine has three parts:
 
 - **Clips.** Feed it a long video (a file or a URL), get back short vertical clips with
