@@ -18,6 +18,7 @@ EXPOSE 3000
 CMD ["pnpm", "exec", "react-router", "dev", "--host", "0.0.0.0", "--port", "3000"]
 
 FROM deps AS build
+ARG DASHBOARD_HOSTS
 RUN pnpm --filter self-hosted-dashboard build
 
 FROM node:24-bookworm-slim AS runtime

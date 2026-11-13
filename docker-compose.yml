@@ -76,6 +76,8 @@ services:
     build:
       context: .
       dockerfile: apps/dashboard/Dockerfile
+      args:
+        DASHBOARD_HOSTS: ${DASHBOARD_HOSTS:-}
     environment:
       CORE_URL: http://core:8000
       PORT: 3000
