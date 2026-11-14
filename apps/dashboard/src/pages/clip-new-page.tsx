@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router";
 
-import { Button, Card, CardContent, Field, FieldDescription, FieldLabel, Input, SegmentWorkspace, StatusMessage } from "@videogpt/ui";
+import { Button, Card, CardContent, Field, FieldDescription, FieldLabel, Input, SegmentWorkspace, StatusMessage } from "@kinoforge/ui";
 
 import { useStudio } from "../studio-context";
 

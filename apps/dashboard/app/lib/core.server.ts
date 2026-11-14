@@ -1,4 +1,4 @@
-import type { SegmentDefinition } from "@videogpt/ui";
+import type { SegmentDefinition } from "@kinoforge/ui";
 
 import type { InferenceProvider, Job, Project } from "../../src/types";
 

@@ -15,7 +15,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@videogpt/ui";
+} from "@kinoforge/ui";
 
 import { useStudio } from "../studio-context";
 import { normalizeKind, projectPath, type Project } from "../types";

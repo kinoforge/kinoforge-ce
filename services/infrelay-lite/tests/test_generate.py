@@ -18,7 +18,7 @@ def test_health_open():
 def test_models_lists_providers_per_kind_or_all():
     res = client.get("/v1/models/video")
     assert res.status_code == 200
-    assert [i["provider"] for i in res.json()["items"]] == ["fal", "videogpt"]
+    assert [i["provider"] for i in res.json()["items"]] == ["fal", "kinoforge"]
     assert client.get("/v1/models/all", params={"per_page": 2}).json()["per_page"] == 2
     assert client.get("/v1/models/story.video").status_code == 404
     assert client.get("/v1/models/hologram").status_code == 404
@@ -167,7 +167,7 @@ def test_without_a_route_auto_has_nothing_to_run(monkeypatch):
     assert res.status_code == 404
 
 
-def test_videogpt_auto_lets_videogpt_route_without_a_local_route(monkeypatch):
+def test_kinoforge_auto_lets_kinoforge_route_without_a_local_route(monkeypatch):
     sent: list = []
 
     class Reply:
@@ -181,17 +181,17 @@ def test_videogpt_auto_lets_videogpt_route_without_a_local_route(monkeypatch):
         sent.append((url, headers["Authorization"], json["inference"]))
         return Reply()
 
-    monkeypatch.setattr("infrelay_lite.adapters.videogpt.httpx.post", post)
+    monkeypatch.setattr("infrelay_lite.adapters.kinoforge.httpx.post", post)
     monkeypatch.setattr(settings(), "infrelay_routes", "")
-    monkeypatch.setattr(settings(), "videogpt_api_key", "vgpt-key")
-    monkeypatch.setattr(settings(), "videogpt_cloud_url", "https://cloud.test/")
-    body = {"inference": {"provider": "videogpt", "model": "auto"}, "input": {"prompt": "p"}}
+    monkeypatch.setattr(settings(), "kinoforge_api_key", "kf-key")
+    monkeypatch.setattr(settings(), "kinoforge_cloud_url", "https://cloud.test/")
+    body = {"inference": {"provider": "kinoforge", "model": "auto"}, "input": {"prompt": "p"}}
 
     res = client.post("/v1/inference/story.write", json=body)
 
     assert (res.status_code, res.json()["output"]["value"]) == (200, "a story")
     assert sent == [
-        ("https://cloud.test/v1/inference/story.write", "Bearer vgpt-key", {"model": "auto"})
+        ("https://cloud.test/v1/inference/story.write", "Bearer kf-key", {"model": "auto"})
     ]
 
 
@@ -209,7 +209,7 @@ def test_auto_on_a_named_provider_without_a_route_runs_its_default(monkeypatch):
     assert (voice, routed) == ([Step("edge", "")], [Step("fal", "fal-ai/tts")])
 
 
-def test_videogpt_late_answer_is_read_at_its_retry_url(monkeypatch):
+def test_kinoforge_late_answer_is_read_at_its_retry_url(monkeypatch):
     class Reply:
         def __init__(self, status, body, retry_after=None):
             self.status_code, self._body = status, body
@@ -226,15 +226,15 @@ def test_videogpt_late_answer_is_read_at_its_retry_url(monkeypatch):
         Reply(200, {"output": {"type": "text", "value": "a story", "mime": "text/plain"}}),
     ]
     got: list = []
-    monkeypatch.setattr("infrelay_lite.adapters.videogpt.httpx.post", lambda url, **kw: late)
+    monkeypatch.setattr("infrelay_lite.adapters.kinoforge.httpx.post", lambda url, **kw: late)
     monkeypatch.setattr(
-        "infrelay_lite.adapters.videogpt.httpx.get",
+        "infrelay_lite.adapters.kinoforge.httpx.get",
         lambda url, **kw: got.append(url) or reads.pop(0),
     )
-    monkeypatch.setattr("infrelay_lite.adapters.videogpt.time.sleep", lambda s: None)
-    monkeypatch.setattr(settings(), "videogpt_api_key", "vgpt-key")
-    monkeypatch.setattr(settings(), "videogpt_cloud_url", "https://cloud.test")
-    body = {"inference": {"provider": "videogpt", "model": "auto"}, "input": {"prompt": "p"}}
+    monkeypatch.setattr("infrelay_lite.adapters.kinoforge.time.sleep", lambda s: None)
+    monkeypatch.setattr(settings(), "kinoforge_api_key", "kf-key")
+    monkeypatch.setattr(settings(), "kinoforge_cloud_url", "https://cloud.test")
+    body = {"inference": {"provider": "kinoforge", "model": "auto"}, "input": {"prompt": "p"}}
 
     res = client.post("/v1/inference/story.write", json=body)
 

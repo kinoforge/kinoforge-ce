@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router";
 
-import { Field, FieldDescription, FieldLabel, Input, SegmentWorkspace, SeriesCreateLayout, StatusMessage, type SeriesDraft } from "@videogpt/ui";
+import { Field, FieldDescription, FieldLabel, Input, SegmentWorkspace, SeriesCreateLayout, StatusMessage, type SeriesDraft } from "@kinoforge/ui";
 
 import { api } from "../api";
 import { useStudio } from "../studio-context";

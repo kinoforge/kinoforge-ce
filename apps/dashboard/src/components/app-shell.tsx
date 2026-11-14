@@ -1,7 +1,7 @@
 import { FolderOpen, Home, Plus } from "lucide-react";
 import { Link, NavLink, Outlet, useLocation } from "react-router";
 
-import { Button, StudioShell, cn } from "@videogpt/ui";
+import { Button, StudioShell, cn } from "@kinoforge/ui";
 
 import { useStudio } from "../studio-context";
 import { normalizeKind, projectPath } from "../types";
@@ -9,7 +9,7 @@ import { Brand } from "./brand";
 
 /** The community-edition source. Self-hosters run this build; the link takes them to the
  *  repo to read the source, file issues, or contribute. */
-const GITHUB_URL = "https://github.com/videogpt-dev/videogpt-ce";
+const GITHUB_URL = "https://github.com/kinoforge/kinoforge-ce";
 
 /** GitHub's own logo. lucide ships no brand marks, so it lives here. */
 function GithubMark({ className }: { className?: string }) {

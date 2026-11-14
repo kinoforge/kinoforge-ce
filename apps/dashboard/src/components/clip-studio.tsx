@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { ClipStudioLayout, StatusMessage, type ClipStudioMoment, type ClipStudioTab } from "@videogpt/ui";
+import { ClipStudioLayout, StatusMessage, type ClipStudioMoment, type ClipStudioTab } from "@kinoforge/ui";
 
 import type { Artifact, Job, Moment, Project } from "../types";
 import { clock, MomentPlayer } from "./clip-moment-player";

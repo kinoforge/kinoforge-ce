@@ -13,7 +13,7 @@ import {
   StatusMessage,
   StoryCreateLayout,
   type StoryDraft,
-} from "@videogpt/ui";
+} from "@kinoforge/ui";
 
 import { api } from "../api";
 import { useStudio } from "../studio-context";

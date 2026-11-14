@@ -9,7 +9,7 @@ from infrelay_lite.adapters.edge_tts import EdgeSpeech
 from infrelay_lite.adapters.speech import FalSpeech
 from infrelay_lite.adapters.text import OpenRouterText
 from infrelay_lite.adapters.video import FalVideo
-from infrelay_lite.adapters.videogpt import VideoGPTGateway
+from infrelay_lite.adapters.kinoforge import KinoforgeGateway
 from infrelay_lite.adapters.whisper import LocalWhisper
 from infrelay_lite.models import MediaKind
 
@@ -22,8 +22,8 @@ _ADAPTERS: list[Adapter] = [
     FalSpeech(),
     EdgeSpeech(),
     LocalWhisper(),
-    # videogpt.dev serves every kind through its own autorouter.
-    *(VideoGPTGateway(kind) for kind in MediaKind),
+    # kinoforge.dev serves every kind through its own autorouter.
+    *(KinoforgeGateway(kind) for kind in MediaKind),
 ]
 
 REGISTRY: dict[tuple[str, MediaKind], Adapter] = {

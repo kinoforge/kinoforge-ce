@@ -23,10 +23,10 @@ class Settings(BaseSettings):
     fal_key: str = ""
     openrouter_api_key: str = ""
 
-    # Provider "videogpt": the user's dashboard-minted key + the hosted gateway URL. Picking it
+    # Provider "kinoforge": the user's dashboard-minted key + the hosted gateway URL. Picking it
     # runs on the full hosted roster and spends this key's credits; without a key it is unavailable.
-    videogpt_api_key: str = ""
-    videogpt_cloud_url: str = ""
+    kinoforge_api_key: str = ""
+    kinoforge_cloud_url: str = ""
 
     # Task routes (infrelay_lite.tasks): JSON of task or kind to its ordered "provider/model"
     # steps, e.g. {"text": ["openrouter/openai/gpt-4o-mini"], "image": ["fal/fal-ai/flux/schnell"]}.

@@ -3,8 +3,8 @@ WORKDIR /repo
 RUN corepack enable && corepack prepare pnpm@11.18.0 --activate
 
 COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
-COPY packages/videogpt-ui ./packages/videogpt-ui
-COPY packages/videogpt-catalog ./packages/videogpt-catalog
+COPY packages/kinoforge-ui ./packages/kinoforge-ui
+COPY packages/kinoforge-catalog ./packages/kinoforge-catalog
 COPY assets ./assets
 COPY apps/dashboard ./apps/dashboard
 RUN pnpm install --frozen-lockfile

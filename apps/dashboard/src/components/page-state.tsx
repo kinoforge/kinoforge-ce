@@ -9,7 +9,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@videogpt/ui";
+} from "@kinoforge/ui";
 
 export function PageLoading({ label = "Loading project" }: { label?: string }) {
   return (

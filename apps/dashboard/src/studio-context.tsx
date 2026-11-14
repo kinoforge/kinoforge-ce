@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react";
 
-import type { SegmentDefinition } from "@videogpt/ui";
+import type { SegmentDefinition } from "@kinoforge/ui";
 
 import { api } from "./api";
 import type { InferenceProvider, Project, ProjectKind } from "./types";

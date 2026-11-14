@@ -56,6 +56,13 @@ Once ready, then open Dashboard: http://localhost:5173
 The first clip run downloads the whisper model into a named volume, so it might be slow once and
 fast after. Output and the model cache survive `docker compose down`.
 
+### Upgrading from a release before 2026-11-14
+
+The compose project is now `kinoforge-ce` and the cloud keys are `KINOFORGE_API_KEY` and
+`KINOFORGE_CLOUD_URL`. Rename those two keys in your `.env`, and copy your old `data` and
+`whisper-cache` volumes (`docker volume ls`) into the `kinoforge-ce_*` ones before the first
+start.
+
 ## How it fits together
 
 | Path | Where it lives | Job |
@@ -66,7 +73,7 @@ fast after. Output and the model cache survive `docker compose down`.
 | `studio` | [submodule](https://github.com/kinoforge/kinoforge-studio) | render service: assembles story scenes into an mp4 (ffmpeg + Remotion) |
 | `services/infrelay-lite` | this repo | inference gateway (local whisper, local voice, OpenRouter, fal) |
 
-`packages/videogpt-ui` and `packages/videogpt-catalog` are the shared UI and catalog
+`packages/kinoforge-ui` and `packages/kinoforge-catalog` are the shared UI and catalog
 libraries, pulled in as submodules.
 
 There are no service-to-service tokens to configure. On a single-user box the containers

@@ -1,6 +1,6 @@
 import { Download } from "lucide-react";
 
-import { Button, ClipLibraryCard, ClipLibraryLayout } from "@videogpt/ui";
+import { Button, ClipLibraryCard, ClipLibraryLayout } from "@kinoforge/ui";
 
 import { artifactUrl } from "../api";
 import type { Artifact } from "../types";

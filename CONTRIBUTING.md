@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for taking the time. This repo is the self-host (Community) edition of videogpt.dev.
+Thanks for taking the time. This repo is the self-host (Community) edition of Kinoforge.
 Bug reports, fixes, and improvements are all welcome.
 
 ## Before you start

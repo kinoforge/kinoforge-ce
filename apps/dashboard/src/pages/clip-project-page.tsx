@@ -8,7 +8,7 @@ import {
   type ClipDraft,
   type ClipSourceKind,
   type ClipStepSlug,
-} from "@videogpt/ui";
+} from "@kinoforge/ui";
 
 import { ClipStudio } from "../components/clip-studio";
 import { ClipResultGallery } from "../components/clip-result-gallery";

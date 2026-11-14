@@ -14,7 +14,7 @@ import {
   StorySteps,
   type StoryStepKind,
   type StoryStepStatus,
-} from "@videogpt/ui";
+} from "@kinoforge/ui";
 
 import { fileUrl } from "../api";
 import { JobPanel } from "../components/job-panel";

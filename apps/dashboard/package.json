@@ -12,7 +12,7 @@
     "typecheck": "react-router typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@videogpt/ui": "workspace:*",
+    "@kinoforge/ui": "workspace:*",
     "@react-router/node": "8.5.1",
     "@react-router/serve": "8.5.1",
     "isbot": "^5.1.36",

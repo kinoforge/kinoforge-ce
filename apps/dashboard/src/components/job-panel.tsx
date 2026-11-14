@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, TerminalSquare } from "lucide-react";
 
-import { Button, JobProgress, StatusMessage } from "@videogpt/ui";
+import { Button, JobProgress, StatusMessage } from "@kinoforge/ui";
 
 import type { Job } from "../types";
 

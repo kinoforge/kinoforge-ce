@@ -1,7 +1,7 @@
 import { useRef, useState, type DragEvent } from "react";
 import { FileVideo, Link2, Upload, Video } from "lucide-react";
 
-import { Button, CardTitle, Input, StatusMessage } from "@videogpt/ui";
+import { Button, CardTitle, Input, StatusMessage } from "@kinoforge/ui";
 
 import { fileUrl } from "../api";
 import type { Project } from "../types";

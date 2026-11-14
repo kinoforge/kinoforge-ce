@@ -14,7 +14,7 @@ one answers.
 
 ## Run
 
-Normally started by the videogpt-ce `docker compose` stack (keys come from the root `.env`).
+Normally started by the kinoforge-ce `docker compose` stack (keys come from the root `.env`).
 To run it on its own:
 
 ```sh

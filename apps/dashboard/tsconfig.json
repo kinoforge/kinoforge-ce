@@ -14,8 +14,8 @@
     "types": ["node", "vite-plus/client"],
     "baseUrl": ".",
     "paths": {
-      "@videogpt/ui": ["../../packages/videogpt-ui/src/index.ts"],
-      "@/*": ["../../packages/videogpt-ui/src/*"]
+      "@kinoforge/ui": ["../../packages/kinoforge-ui/src/index.ts"],
+      "@/*": ["../../packages/kinoforge-ui/src/*"]
     },
     "rootDirs": [".", "./.react-router/types"]
   },

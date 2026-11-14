@@ -14,7 +14,7 @@ import {
   SeriesWorkspaceLayout,
   StatusMessage,
   type SeriesEpisode,
-} from "@videogpt/ui";
+} from "@kinoforge/ui";
 
 import { api } from "../api";
 import { EpisodeWorkspace } from "../components/episode-workspace";

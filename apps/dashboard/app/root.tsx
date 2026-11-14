@@ -14,7 +14,7 @@ import stylesheet from "./app.css?url";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-  { rel: "icon", href: "/videogpt-icon.svg", type: "image/svg+xml" },
+  { rel: "icon", href: "/mark.svg", type: "image/svg+xml" },
 ];
 
 export const meta: MetaFunction = () => [

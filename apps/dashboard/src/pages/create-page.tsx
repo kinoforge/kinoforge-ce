@@ -1,7 +1,7 @@
 import { RotateCw } from "lucide-react";
 import { useNavigate } from "react-router";
 
-import { Button, CreateHubLayout, StatusMessage } from "@videogpt/ui";
+import { Button, CreateHubLayout, StatusMessage } from "@kinoforge/ui";
 
 import { useStudio } from "../studio-context";
 
